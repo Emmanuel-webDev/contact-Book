@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Contacts</title>
+    <link rel="stylesheet" href="http://localhost:3030/search.css">
+</head>
+<body>
+    <header>
+        <h2> <a href="/Contacts">My Contact</a> </h2>
+
+        <a href="/NewContact">Add Contact</a>
+    <form action="/logout" method="POST">
+        <button class="btn">logout</button>
+    </form>
+
+    </header>
+    <h1>Find contacts of loved ones</h1>
+    <input type="text" name="search" id="box" placeholder="Search contacts" onkeyup="sendData(this)">
+    <section>
+<h3 id="searchResult"></h3>
+    </section>
+
+    <script>
+        function sendData(e){
+            const search = document.getElementById('searchResult');
+            let match = e.value.match(/^[a-zA-z ]*/)
+            let secMatch = e.value.match(/\s*/);
+            if(secMatch[0] === e.value){
+                search.innerHTML=''
+                return;
+            }
+
+            if(match[0] === e.value){
+
+                fetch('getContacts', {
+                method:'POST',
+                headers:{'Content-Type': "application/json"},
+                body: JSON.stringify({payload: e.value})
+            }).then(res=> res.json()).then(data =>{
+                let pay = data.payload;
+                search.innerHTML='';
+                if(pay.length < 1){
+                    search.innerHTML= '<p>Contact not found</p>'
+                    return;
+                }
+
+                pay.forEach((item, index) => {
+                    if(index > 0){
+                        search.innerHTML += '<hr>';
+                    }
+                    search.innerHTML += `<p>${item.Name}</p> <p>${item.Tel}</p>`
+                });   
+        })
+            return;
+            }
+           search.innerHTML = '';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+*{
+    font-family: 'Alkalami', serif;
+}
+@media (min-width: 230px) {
+    body{
+        width: 100%;
+        margin: 0;
+    }
+    h1{
+    text-align: center;
+}
+
+form{
+    margin: 2rem 20%;
+}
+
+form .btn{
+    background-color: rgb(7, 4, 182);
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 7px;
+}
+
+form p a{
+cursor: pointer;
+color:#000
+}
+
+form p input{
+    border: none;
+    height: 30px;
+    border-radius: 7px;
+    background-color: rgb(235, 235, 235);
+}
+
+}
+
+@media (min-width:767px) {
+    body{
+        width: 100%;
+        margin: 0;
+    }
+    h1{
+    text-align: center;
+}
+
+form{
+    margin: 2rem 20%;
+}
+
+form .btn{
+    background-color: rgb(7, 4, 182);
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 7px;
+}
+
+form p a{
+cursor: pointer;
+color:#000
+}
+
+form p input{
+    border: none;
+    height: 30px;
+    width: 60%;
+    border-radius: 7px;
+    background-color: rgb(235, 235, 235);
+}
+}
+
+@media (min-width: 990px) {
+    body{
+        width: 100%;
+        margin: 0;
+    }
+    h1{
+    text-align: center;
+}
+
+form{
+    margin: 2.5rem 30%;
+}
+
+form .btn{
+    background-color: rgb(7, 4, 182);
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 7px;
+}
+
+form p a{
+cursor: pointer;
+color:#000
+}
+
+form p input{
+    border: none;
+    height: 30px;
+    border-radius: 7px;
+    background-color: rgb(235, 235, 235);
+}
+}
+

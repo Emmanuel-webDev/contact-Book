@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+*{
+    font-family: 'Alkalami', serif;
+}
+@media (min-width:230px) {
+    body{
+    margin:0
+}
+
+h1{
+    text-align: center;
+}
+
+input{
+    display:grid;
+    margin: 0 auto;
+    border: none;
+    height: 30px;
+    padding: 2.5%;
+    border-radius: 7px;
+    background-color: rgb(235, 235, 235);
+}
+
+.btn{
+    background-color: rgb(7, 4, 182);
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 7px;
+}
+
+header{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header a{
+    color: black;
+    text-decoration: none;
+}
+
+}
+
+@media (min-width: 990px){
+    body{
+        margin:0
+    }
+    
+    h1{
+        text-align: center;
+    }
+    
+    input{
+        display:grid;
+        margin: 0 auto;
+        border: none;
+        width: 50%;
+        padding: 1.5%;
+        border-radius: 10px;
+        background-color: rgb(235, 235, 235);
+    }
+    
+    .btn{
+        background-color: rgb(7, 4, 182);
+        color:white;
+        padding: 0.75rem;
+        border: none;
+        border-radius: 7px;
+    }
+    
+    header{
+        margin: 1.5% 2%;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+

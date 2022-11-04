@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="http://localhost:3030/contact.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1> <a href="/Contacts">My Contact</a></h1>
+            <a href="/NewContact">Add Contact</a>
+            <a href="/search" >Search Contacts</a>
+        <form action="/logout" method="POST">
+            <button class="btn">logout</button>
+        </form>
+
+        </header>
+  
+
+
+        <% if(contacts.length === 0){ %>
+             <h1>No contacts available!</h1>
+             <h3>You can add one by visiting <a href="/NewContact">Add Contact</a></h3>
+            <% } %>
+
+     <ul>
+            <% for(const numbers of contacts){ %>
+            
+         <li>
+            <article id="sec">
+                  <img src="<%= numbers.img %>" alt="Contact-image">
+                <h1><%= numbers.Name %></h1>
+            </article>
+                <h2>Tel: <%= numbers.Tel %></h2>
+                <p>Created: <%= numbers.created_at %></p>
+                <section id="btn">
+                    <a href="/updates/<%= numbers._id %>" class="btn">Update contact</a>
+                <form action="/del/<%= numbers._id %>" method="POST">
+                    <button class="btn">Delete</button>
+                </form> 
+                </section>
+        
+               
+        </li>
+         
+        <% } %>
+
+       
+           
+        </ul>
+    </main>
+
+   
+</body>
+</html>

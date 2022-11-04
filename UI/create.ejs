@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Contact</title>
+    <link rel="stylesheet" href="http://localhost:3030/create.css">
+</head>
+<body>
+    <header>
+        <h2><a href="/Contacts">My Contact</a> </h2>
+        <a href="/search" >Search Contacts</a>
+    <form action="/logout" method="POST">
+        <button class="btn">logout</button>
+    </form>
+
+    </header>
+    
+    <main>
+        <h1>Add new contacts</h1>
+        <form action="/newContacts" method="POST" enctype="multipart/form-data">  
+    
+                 <p>
+                <label for="mail">Name</label>
+                <input type="text" name="Name" id="mail"  required>
+            </p>
+           
+            
+            <p>
+                <label for="pass">Tel</label>
+                <input type='tel' name="Tel" id="pass"  required>
+                <section id="check"></section>
+            </p>
+
+            <p>
+                <label for="image">Contact-image</label>
+                <input type="file" name="img" id="image">
+            </p>
+            
+            <button class="btn">Save Contact</button>
+          </form>
+    </main>
+
+  
+
+</body>
+</html>

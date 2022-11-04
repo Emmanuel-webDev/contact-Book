@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Contact</title>
+    <link rel="stylesheet" href="http://localhost:3030/update.css">
+</head>
+<body>
+    <header>
+        <h1><a href="/Contacts">My Contact</a> </h1>
+        <a href="/NewContact">Add Contact</a>
+        <a href="/search" >Search Contacts</a>
+    <form action="/logout" method="POST">
+        <button class="btn">logout</button>
+    </form>
+
+    </header>
+    <main>
+        <form action="/update/<%= contact._id %>" method="POST" enctype="multipart/form-data">  
+            <p>
+                <label for="mail">Name</label>
+                <input type="text" name="Name" id="mail" value="<%= contact.Name %>">
+            </p>
+            
+            <p>
+                <label for="pass">Tel</label>
+                <input type="tel" name="Tel" id="pass" value="<%= contact.Tel %>">
+            </p>
+
+            <p>
+                <label for="image">Contact-image</label>
+                <input type="file" name="img" id="image" value="<%= contact.img %>">
+            </p>
+            
+            <button class="btn">Update</button>
+          </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="http://localhost:3030/login.css">
+</head>
+<body>
+    <main>
+        <h1> Login To Account</h1>
+        
+  
+        <form action="/Login" method="POST">  
+          <p>
+              <label for="mail">E-mail</label>
+              <input type="email" name="Email" id="mail"  required>
+          </p>
+          
+          <p>
+              <label for="pass">Password</label>
+              <input type="password" name="password" id="pass"  required>
+          </p>
+          
+          <button class="btn">Login</button>
+          <p><a href="/">SignUp to create account </a></p>
+  
+        </form>
+  
+     </main>
+</body>
+</html>

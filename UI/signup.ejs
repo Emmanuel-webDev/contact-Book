@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="http://localhost:3030/styles.css">
+</head>
+<body>
+    <main>
+        <h1> Create New Account </h1>
+        
+  
+        <form action="/signUp" method="POST">  
+          <p>
+              <label for="name">Full Name</label>
+              <input type="text" name="Username" id="name"  required>
+          </p>  
+
+          <p>
+              <label for="mail">E-mail</label>
+              <input type="email" name="Email" id="mail"   required>
+          </p>
+          
+          <p>
+              <label for="pass">Password</label>
+              <input type="password" name="password" id="pass"  required minlength="6">
+          </p>
+          
+  
+          <button class="btn">Create Account</button>
+          <p><a href="/loginUser">or Login instead</a></p>
+  
+        </form>
+  
+     </main>
+</body>
+</html>
